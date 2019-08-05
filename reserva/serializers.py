@@ -71,7 +71,7 @@ class ReservHaSerializer(serializers.ModelSerializer):
          if not cphab.libre:
             raise serializers.ValidationError("Esta ocupada para este dia")
          else:
-             cphab.libre=True()
+             cphab.libre=True
              cphab.save()
         else: 
            newcup= CapacidadH(dia=date,libre=False,habitacion=habc)
